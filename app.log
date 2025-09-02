@@ -1,0 +1,246 @@
+/usr/bin/python3: can't open file '/home/pi/Documents/app.py': [Errno 2] No such file or directory
+/usr/bin/python3: can't open file '/home/pi/Documents/app.py': [Errno 2] No such file or directory
+/usr/bin/python3: can't open file '/home/pi/Documents/app.py': [Errno 2] No such file or directory
+/usr/bin/python3: can't open file '/home/pi/Documents/app.py': [Errno 2] No such file or directory
+/usr/bin/python3: can't open file '/home/pi/Documents/app.py': [Errno 2] No such file or directory
+/usr/bin/python3: can't open file '/home/pi/Documents/app.py': [Errno 2] No such file or directory
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+Traceback (most recent call last):
+  File "/home/pi/Documents/app.py", line 2, in <module>
+    from apscheduler.schedulers.background import BackgroundScheduler
+ModuleNotFoundError: No module named 'apscheduler'

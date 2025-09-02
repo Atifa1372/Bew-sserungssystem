@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bewaesserungssytem</title>
+    <link rel="stylesheet" href="watering.css">
+    
+</head>
+<body>
+   
+    <div id="response"></div>
+    <div class="container">
+        
+        <div class="container-1">
+            <h1 id="header" >Bewässerungssystem</h1>
+        </div>
+        <div class="container-2">
+            <div class = "text-time" id="datetime"></div>
+            
+        </div>
+
+        <div class="container-3">
+            <img src="images/plant1.png" alt="plant1" >
+            <img src="images/plant2.png" alt="plant2" >
+            <img src="images/plant3.png" alt="plant3" >
+            
+        </div>
+        <div class="container-4">
+        
+            <label>Pflanze 1</label>
+            <label>Pflanze 2</label>
+            <label>Pflanze 3</label>
+
+        </div>
+        <div class="container-4">
+          
+            <progress id="progress-bar-1" value="0" max="100"></progress>
+            
+            <progress id="progress-bar-2" value="0" max="100"> </progress>
+            
+            <progress id="progress-bar-3" value="0" max="100"> </progress>
+
+        </div>
+        
+        
+        <div class="container-5">
+            
+            <div class="btn-group">
+                <button class="button" id="startButton1" >Pumpe 1 starten</button>
+                <button class="button" id="stopButton1" >Pumpe 1 stoppen</button>
+            </div>
+            
+            
+            
+            <div class="btn-group">
+                <button class="button" id="startButton2" >Pumpe 2 starten</button>
+                <button class="button" id="stopButton2" >Pumpe 2 stoppen</button>
+            </div>
+            <div class="btn-group">
+                <button class="button"  id="startButton3">Pumpe 3 starten</button>
+                <button class="button" id="stopButton3" >Pumpe 3 stoppen</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!--js für die datum und Uhrzeit anzeige-->
+    <script>
+
+    function updateTime(){
+        const now = new Date();
+        const tage=["Sonntag" ,"Montag" , "Dienstag","Mittwoch","Donnerstag" , "Freitag","Samstag"];
+        let tag = tage[now.getDay()];
+
+        const datum = now.toLocaleString();
+        const datetimeString="Heute : " + tag +" , " + datum ;
+        document.getElementById("datetime").innerHTML = datetimeString;
+    }
+
+    setInterval(updateTime , 1000);
+       
+    </script>
+
+
+    <!--js für die button onClick function-->
+    <script>
+        
+        
+        function controlPump(sensor_id, action) {
+            fetch(`http://raspberrypi:5001/control?sensor_id=${sensor_id}&action=${action}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("response").innerHTML = data.status;
+                    updateProgressBar();  // Update nach Steuerung
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Events für Buttons
+        document.getElementById('startButton1').onclick = () => controlPump(1, 'start');
+        document.getElementById('stopButton1').onclick = () => controlPump(1, 'stop');
+        document.getElementById('startButton2').onclick = () => controlPump(2, 'start');
+        document.getElementById('stopButton2').onclick = () => controlPump(2, 'stop');
+        document.getElementById('startButton3').onclick = () => controlPump(3, 'start');
+        document.getElementById('stopButton3').onclick = () => controlPump(3, 'stop');
+        
+    </script>
+
+    <script>
+        // Funktion zum Aktualisieren der Progressbar
+        function updateProgressBar() {
+            // Fetch-Request zur API (/status), um die Feuchtigkeitswerte zu bekommen
+            fetch('http://raspberrypi:5001/status', {
+                method: 'GET',
+                mode: 'cors'  // Stelle sicher, dass deine API CORS unterstützt
+            })
+            .then(response => response.json())  // Antwort als JSON verarbeiten
+            .then(data => {
+                console.log(data);  // Antwortdaten in der Konsole ausgeben
+                for (const sensor_id in data) {
+                    const feuchtigkeit = parseFloat(data[sensor_id].feuchtigkeit); // Feuchtigkeit extrahieren
+                    const progressBar = document.getElementById(`progress-bar-${sensor_id}`);
+                    progressBar.value = feuchtigkeit; // Setze den Wert der ProgressBar
+                }
+                
+                
+            })
+            .catch(error => {
+                console.error('Fehler beim Abrufen der API:', error);
+            });
+        }
+
+        // Progressbar alle halb std aktualisieren 1800000(1000 ms = 1 sec)
+        setInterval(updateProgressBar, 600000 );  // jede 10 min
+        
+       
+
+    </script>
+
+    
+</body>
+</html>
