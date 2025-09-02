@@ -144,7 +144,7 @@ def auto_control():
 
 
 def auto_control_logic():
-    
+
     result = []
 
     for sensor_id in pumpen:
@@ -163,7 +163,7 @@ def auto_control_logic():
 # Initialisiere den Scheduler
 # 2 mal Bewässerung im Woche reicht 
 scheduler = BackgroundScheduler()
-scheduler.add_job(func=auto_control, trigger="interval", days=2)  #hours=20  minutes=10
+scheduler.add_job(func=auto_control_logic, trigger="interval", days=2)  #hours=20  minutes=10
 
 scheduler.start()
 
