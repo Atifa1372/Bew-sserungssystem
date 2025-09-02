@@ -137,24 +137,27 @@ def control_pump():
 
 def auto_control():
 
-    result=[]
+    result= auto_control_logic()
 
+
+    return jsonify({"Status": result})
+
+
+def auto_control_logic():
     
+    result = []
+
     for sensor_id in pumpen:
         feuchtigkeit_prozent = rechnug_feuchtigkeit(sensor_id)
         
         if feuchtigkeit_prozent < 20:  # Feuchtigkeit unter 20% - Pumpe an
             pumpe_start(sensor_id)
-            
-        
             result.append(f"Pumpe {sensor_id}: Der Boden ist trocken, Pumpe eingeschaltet.") 
-        else:  # Feuchtigkeit über 20% - Pumpe aus
+        else:
             pumpe_stop(sensor_id)
             result.append(f"Pumpe {sensor_id}: Der Boden ist feucht, Pumpe ausgeschaltet.")
-          
 
-    return jsonify({"Status": result})
-
+    return result
 
     
 # Initialisiere den Scheduler
