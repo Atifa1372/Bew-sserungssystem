@@ -175,7 +175,7 @@ def pumpe_start(sensor_id):
     pumpen[sensor_id]["pump_status"] = True
     print(f"Pumpe {sensor_id} wurde gestartet!")
     
-    threading.Thread(target=run_pump_for_15_seconds, args=(sensor_id,)).start()
+    threading.Thread(target=run_pump_for_5_seconds, args=(sensor_id,)).start()
     
     
 
@@ -189,8 +189,8 @@ def pumpe_stop(sensor_id):
 
 
 
-# Funktion: Pumpe für 15 Sekunden laufen lassen und dann stoppen
-def run_pump_for_15_seconds(sensor_id):
+# Funktion: Pumpe für 5 Sekunden laufen lassen und dann stoppen
+def run_pump_for_5_seconds(sensor_id):
     time.sleep(5) 
     pumpe_stop(sensor_id)  
 
