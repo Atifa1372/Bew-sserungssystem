@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify , render_template #import klasse Flask
+from flask import Flask, request, jsonify , render_template 
 from apscheduler.schedulers.background import BackgroundScheduler
 import RPi.GPIO as GPIO 
 import time
@@ -11,8 +11,6 @@ from flask_cors import CORS
 
 
 
-# Erstellung einer neue Instanz von Flask-klasse -->app
-# name : eine spezielle var in py. und enthält den name des aktuellen Moduls. zum starten 
 app = Flask(__name__)
 
 CORS(app, resources=r'/*')
@@ -29,7 +27,7 @@ RELAY_PINS={
 for pin in RELAY_PINS.values():
 
     GPIO.setup(pin, GPIO.OUT)
-    GPIO.output(pin, GPIO.HIGH) #neu
+    GPIO.output(pin, GPIO.HIGH) 
 
 
 
@@ -73,7 +71,7 @@ def rechnug_feuchtigkeit(sensor_id):
         except:
             print(f"error in run {_}")
         
-        time.sleep(0.1)  # Eine kurze Verzögerung zwischen den Messungen (100ms)
+        time.sleep(0.1) 
 
     # Durchschnitt berechnen
     
@@ -86,9 +84,9 @@ def rechnug_feuchtigkeit(sensor_id):
     return rueckgabe
 
 
-# API Endpoint zum status-abfragen  --> endpoint : baraye inke user betune data ra az aaplication begire
-@app.route('/status' , methods=['GET']) # har reshtei ke dar rout gharar bedim mishe ye safhe az web ma
-# method GET =  read 
+
+@app.route('/status' , methods=['GET']) 
+
 def get_status():
     statuses = {}
 
@@ -109,27 +107,23 @@ def get_status():
     
 
 
-# API Endpoint zum pump-steuerung    http://127.0.0.1:5001/control?action=stop  oder http://127.0.0.1:5001/control?sensor_id=1&action=start
+#  http://127.0.0.1:5001/control?action=stop  oder http://127.0.0.1:5001/control?sensor_id=1&action=start
 @app.route('/control' , methods=['GET'])
 
 def control_pump():
 
-    # rquest.args -> ist eine dictionary und enthält alle eine Query-parameter von URL
-    # Query parameter kommt nach ? in URL und wir können damit ser Method ausführen
-    # action=start --> dann pumpe start
-    # wir brauchen diese Query parameter damit wir den Methode selber durchführen
+    
     action = request.args.get('action')
     sensor_id = int(request.args.get('sensor_id'))
-    #print(request.args.get('action'))
-
+    
     
     if action == 'start':
-        #GPIO.output(pin, GPIO.LOW)
+        
         pumpe_start(sensor_id)
         return jsonify({"Status" : "Pumpe gestartet!"}) ,200
     
     elif action == 'stop':
-        #GPIO.output(pin,GPIO.HIGH)
+        
         pumpe_stop(sensor_id)
         return jsonify({"Status": "Pumpe gestoppt!"}),200
     
@@ -162,17 +156,11 @@ def auto_control():
     return jsonify({"Status": result})
 
 
-#def start_periodic_check():
-    #thread = threading.Thread(target=auto_control)
-    #thread.daemon = True  # Der Thread wird automatisch beendet, wenn die Flask-App stoppt
-    #thread.start()
     
-   
-
 # Initialisiere den Scheduler
 # 2 mal Bewässerung im Woche reicht 
 scheduler = BackgroundScheduler()
-scheduler.add_job(func=auto_control, trigger="interval", hours=10)  #hours=20 days=2 minutes
+scheduler.add_job(func=auto_control, trigger="interval", days=2)  #hours=20  minutes=10
 
 scheduler.start()
 
@@ -183,8 +171,7 @@ def pumpe_start(sensor_id):
     GPIO.output(RELAY_PINS[sensor_id], GPIO.LOW)  # Relais aktivieren und pumpe starten
     pumpen[sensor_id]["pump_status"] = True
     print(f"Pumpe {sensor_id} wurde gestartet!")
-    # Starte die Pumpe und lasse sie 15 Sekunden laufen
-    #thread ist besser als time.sleep (time.sleep blokiert ganze programm für z.B 15 sek)
+    
     threading.Thread(target=run_pump_for_15_seconds, args=(sensor_id,)).start()
     
     
@@ -199,16 +186,16 @@ def pumpe_stop(sensor_id):
 
 
 
-# Funktion, die in einem separaten Thread läuft: Pumpe für 15 Sekunden laufen lassen und dann stoppen
+# Funktion: Pumpe für 15 Sekunden laufen lassen und dann stoppen
 def run_pump_for_15_seconds(sensor_id):
-    time.sleep(5)  # Warten für 5 Sekunden
-    pumpe_stop(sensor_id)  # Nach 15 Sekunden die Pumpe stoppen
+    time.sleep(5) 
+    pumpe_stop(sensor_id)  
 
 
     
 if __name__ == '__main__':
     
-    app.run(host='0.0.0.0' , port=5001 , debug=True ) #der flask-server startet
+    app.run(host='0.0.0.0' , port=5001 , debug=True )
 
 
 
