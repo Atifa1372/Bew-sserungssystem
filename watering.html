@@ -91,7 +91,7 @@
             fetch(`http://raspberrypi:5001/control?sensor_id=${sensor_id}&action=${action}`)
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById("response").innerHTML = data.status;
+                    document.getElementById("response").innerHTML = data.Status;
                     updateProgressBar();  // Update nach Steuerung
                 })
                 .catch(error => console.error('Error:', error));
@@ -115,9 +115,9 @@
                 method: 'GET',
                 mode: 'cors'  // Stelle sicher, dass deine API CORS unterstützt
             })
-            .then(response => response.json())  // Antwort als JSON verarbeiten
+            .then(response => response.json())  
             .then(data => {
-                console.log(data);  // Antwortdaten in der Konsole ausgeben
+                console.log(data);  
                 for (const sensor_id in data) {
                     const feuchtigkeit = parseFloat(data[sensor_id].feuchtigkeit); // Feuchtigkeit extrahieren
                     const progressBar = document.getElementById(`progress-bar-${sensor_id}`);
@@ -131,10 +131,11 @@
             });
         }
 
+        updateProgressBar();
+
         // Progressbar alle halb std aktualisieren 1800000(1000 ms = 1 sec)
-        setInterval(updateProgressBar, 600000 );  // jede 10 min
+        setInterval(updateProgressBar, 1800000 );  
         
-       
 
     </script>
 

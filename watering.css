@@ -1,3 +1,6 @@
+#response {
+    display: none;
+}
 
 .container{
     display: flex;
